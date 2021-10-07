@@ -143,7 +143,7 @@ function searchTag () {
         if(tagMatch.indexOf(false) != -1){
             listingContainer.children[x].style.display = 'none';
         }else{
-            listingContainer.children[x].removeAttribute(style);
+            listingContainer.children[x].removeAttribute('style');
         }
     }
 
