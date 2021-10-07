@@ -1,0 +1,200 @@
+:root{
+    --ddcyan: hsl(180, 29%, 50%);
+    --lgcyan: hsl(180, 52%, 96%); /*(Background)*/
+    --lgcyan2: hsl(180, 31%, 95%); /*(Filter Tablets)*/
+    --dgcyan: hsl(180, 8%, 52%);
+    --vdgcyan: hsl(180, 14%, 20%);
+}
+*{
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+body{
+    background-color: var(--lgcyan);
+}
+nav{
+    width: 100%;
+    height: 15vh;
+    background: url(./images/bg-header-mobile.svg), var(--ddcyan);
+    background-size: cover;
+    background-position: bottom;
+}
+/* Tag Search Styles */
+.tag-search-container{
+    width: 90%;
+    display: flex;
+    margin: 0rem 5%;
+    border-radius: .25rem;
+    background-color: white;
+    transform: translateY(-50%);
+}
+.tag-search{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0rem 5%;
+}
+.clear-container p{
+    position: relative;
+    top: 25%;
+    color: var(--dgcyan);
+    padding: 0rem 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+#listings-container{
+    padding: 3rem 5%;
+}
+.job-element{
+    width: 100%;
+    margin-bottom: 4rem;
+    padding: 2rem 2rem 1rem;
+    border-left: .5rem solid transparent;
+    border-radius: .5rem;
+    background-color: white;
+}
+.featured{
+    border-left: .5rem solid var(--ddcyan);
+}
+.img-container{
+    width: fit-content;
+    position: absolute;
+    transform: translateY(-100%);
+    margin-bottom: 1rem;
+}
+.img-container img{
+    width: 50px;
+    height: 50px;
+}
+.company-container{
+    display: flex;
+    align-items: center;
+    color: var(--ddcyan);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.company-container p{
+    height: 27px;
+    line-height: 27px;
+    border-radius: 1rem;
+    margin-right: .5rem;
+}
+.n{
+    color: white;
+    background-color: var(--ddcyan);
+    padding: 0rem .5rem;
+    font-weight: 500;
+    font-size: 12px;
+}
+.f{
+    color: white;
+    background-color: var(--vdgcyan);
+    padding: 0rem .5rem;
+    font-weight: 500;
+    font-size: 12px;
+}
+.listing-title{
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: color 200ms ease;
+}
+.listing-title:hover{
+    color: var(--ddcyan);
+}
+.listing-info-container{
+    display: flex;
+    align-items: center;
+    opacity: .5;
+    margin-bottom: 1rem;
+}
+.listing-info-container span{
+    width: 5px;
+    height: 5px;
+    position: relative;
+    background-color: black;
+    border-radius: 2.5px;
+    margin: 0rem .5rem;
+}
+hr{
+    opacity: .5;
+    margin-bottom: 1rem;
+}
+.tag-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tag{
+    width: fit-content;
+    padding: .5rem;
+    margin: .5rem .5rem;
+    color: var(--ddcyan);
+    background-color: var(--lgcyan);
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: .25rem;
+    transition: 200ms ease;
+}
+.tag:hover{
+    color: var(--lgcyan);
+    background-color: var(--ddcyan);
+}
+.tagSearch-tag{
+    display: flex;
+    align-items: center;
+    background-color: var(--lgcyan);
+    margin: .5rem .5rem;
+    color: var(--ddcyan);
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+.tagSearch-tag p{
+    padding: 0rem .5rem;
+}
+.tagSearch-tag i{
+    background-color: var(--ddcyan);
+    color: var(--lgcyan);
+    padding: .5rem;
+    transition: 200ms ease;
+}
+.tagSearch-tag i:hover{
+    background-color: var(--lgcyan);
+    color: var(--ddcyan);
+}
+
+@media (min-width: 1000px) {
+    nav{
+        background: url(./images/bg-header-desktop.svg), var(--ddcyan);
+        background-size: cover;
+        background-position: bottom;
+    }
+    #listings-container{
+        padding: 3rem 8%;
+    }
+    .job-element{
+        display: flex;
+        align-items: center;
+        padding: 2rem 2rem 2rem;
+    }
+    .img-container{
+        width: fit-content;
+        position: static;
+        transform: translateY(0%);
+        margin: 0rem 2rem 0rem 0rem;
+    }
+    .img-container img{
+        width: 70px;
+        height: 70px;
+    }
+    hr{
+        display: none;
+    }
+    .tag-container{
+        justify-content: right;
+        flex: 1;
+    }
+}
